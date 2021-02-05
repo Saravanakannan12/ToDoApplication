@@ -43,14 +43,7 @@ public class ToDoController {
 		return principal.toString();
 	}
 	
-	@RequestMapping(value = "/home", method = RequestMethod.GET)
-	private String homePage(ModelMap model) {
-		String userName = getUserName(model);
-		//model.put("todoTable", );
-		return "home";
-	}
-	
-	//
+		//
 	@RequestMapping(value = "/addToDoItems", method = RequestMethod.GET)
 	public String showAddTodoPage(ModelMap model) {
 		model.addAttribute("todo", new ToDoModel());
